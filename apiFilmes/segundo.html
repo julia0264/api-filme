@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR" ng-app="filmeMais">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Angular Js -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Filmes</title>
+</head>
+
+<body>
+
+  <h1 class="p-3 mb-2 bg-dark text-white text-center"><div class="bg-dark">
+        <div class="container">
+      <div class="row text-center" ng-controller="RestMax">
+        <div class="col-12">
+          <h1 class="p-3 mb-5 bg-dark text-white text-center"><div class="bg-dark">{{ movies.title }}</h1>
+          <img class="img-fluid rounded" src="https://image.tmdb.org/t/p/w500{{ movies.poster_path }}">
+          <p class="text-center fs-4 pt-5 text-black">{{ movies.overview }}</p>
+          <p class="text-center fs-4 text-black">Média de avaliações: {{ movies.vote_average }} <span class="fa fa-star estrela-cor"></span></p>
+
+          <p class="text-center fs-4 text-black">Data de lancamento: {{ movies.release_date }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
